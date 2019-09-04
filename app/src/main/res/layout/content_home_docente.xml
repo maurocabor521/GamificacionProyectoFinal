@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/cursos_educacion_infantil"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".presentation.view.activity.docente.HomeDocenteActivity"
+    tools:showIn="@layout/app_bar_home_docente">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/img_2" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_gam_asignar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tsize_80dp"
+                android:text="Asignar Ejercicios"
+                android:textSize="@dimen/tsize_20dp"
+
+                android:theme="@style/RaisedButtonGreen"
+                android:layout_margin="@dimen/tsize_10dp"
+                android:drawableRight="@drawable/ic_menu_send"/>
+            <Button
+                android:id="@+id/btn_gam_ejercicios"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tsize_80dp"
+                android:text="Mis Ejercicios"
+                android:textSize="@dimen/tsize_20dp"
+                android:theme="@style/RaisedButtonGreen"
+                android:layout_margin="@dimen/tsize_10dp"
+                android:drawableRight="@drawable/ic_lista_ejercicios"/>
+            <Button
+                android:id="@+id/btn_gam_grupos"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tsize_80dp"
+                android:text="Mis Grupos"
+                android:textSize="@dimen/tsize_20dp"
+                android:theme="@style/RaisedButtonGreen"
+                android:layout_margin="@dimen/tsize_10dp"
+                android:drawableRight="@drawable/ic_menu_gallery"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:orientation="vertical">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_docente_conciencias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/colorAccent"
+                android:visibility="gone">
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
